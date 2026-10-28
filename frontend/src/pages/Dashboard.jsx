@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import {
   BookOpen, FileSearch, CheckCircle, ListChecks, ShieldAlert,
-  FileText, Bell, FileEdit, UserCheck, ArrowRight, ShieldCheck, Cpu
+  FileText, Bell, FileEdit, UserCheck, ArrowRight, ShieldCheck, Cpu,
+  MessageCircle
 } from 'lucide-react';
 
 const Dashboard = () => {
@@ -72,6 +73,13 @@ const Dashboard = () => {
       link: "/reminders",
       icon: <Bell size={28} color="#ea580c" />,
       badge: "Background Jobs"
+    },
+    {
+    title: "Government Services RAG Assistant",
+    desc: "Ask questions about government services and receive grounded answers from official documents, with source citations and scope checking.",
+    link: "/rag-assistant",
+    icon: <MessageCircle size={28} color="var(--primary)" />,
+    badge: "AI / RAG"
     }
   ];
 

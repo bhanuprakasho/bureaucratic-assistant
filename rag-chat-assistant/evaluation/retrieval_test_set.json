@@ -1,0 +1,157 @@
+{
+  "_readme": [
+    "Retrieval test set for scripts/eval_retrieval.py.",
+    "A case is scored only when verified=true AND must_contain holds a real phrase (not 'TODO').",
+    "To finish a draft case: open expected_file in documents/<service>/, find the passage that answers the query, copy a SHORT distinctive phrase from it into must_contain (matching ignores case and line breaks), correct expected_file if my guess is wrong, then set verified=true.",
+    "Write queries the way a normal citizen would ask, not copied from the PDF wording, so paraphrase handling is tested.",
+    "split='tune' cases are used while tuning; split='final' cases should be scored once at the end.",
+    "expected_file values marked verified=false are only my guesses from the file names."
+  ],
+  "cases": [
+    {
+      "id": "passport-01", "split": "tune", "service": "passport",
+      "query": "my 12 year old daughter needs a passport, what is the process",
+      "expected_file": "latest-passport-manual-for-disclosure-under-RTI-Act.pdf",
+      "must_contain": ["passports to minors"],
+      "verified": true,
+      "note": "Chunk with 'ISSUE OF PASSPORTS TO MINORS' (manual p.19) seen in your inspect_index output."
+    },
+    {
+      "id": "passport-02", "split": "tune", "service": "passport",
+      "query": "what documents do I need to prove my date of birth when applying for a passport",
+      "expected_file": "application-form-instruction-booklet-v3.0.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+    {
+      "id": "passport-03", "split": "tune", "service": "passport",
+      "query": "how do I change the address on my existing passport",
+      "expected_file": "application-form-instruction-booklet-v3.0.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+    {
+      "id": "passport-04", "split": "final", "service": "passport",
+      "query": "my son studies in a hostel away from us, what passport validity will he get",
+      "expected_file": "latest-passport-manual-for-disclosure-under-RTI-Act.pdf",
+      "must_contain": ["short validity ordinary passport of five years"],
+      "verified": true,
+      "note": "Chunk 'PASSPORTS TO STUDENTS WHO STAY AWAY FROM THEIR PARENTS' (manual p.32) seen in your inspect_index output."
+    },
+    {
+      "id": "passport-05", "split": "final", "service": "passport",
+      "query": "what should I do if my passport is lost or stolen",
+      "expected_file": "latest-passport-manual-for-disclosure-under-RTI-Act.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+
+    {
+      "id": "aadhaar-01", "split": "tune", "service": "aadhaar",
+      "query": "which documents can I use as proof of address for Aadhaar",
+      "expected_file": "list-of-supporting-document-for-aadhaar-enrolment-and-update.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+    {
+      "id": "aadhaar-02", "split": "tune", "service": "aadhaar",
+      "query": "how do I update my mobile number linked to Aadhaar",
+      "expected_file": "resident-handbook-english-2021.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+    {
+      "id": "aadhaar-03", "split": "tune", "service": "aadhaar",
+      "query": "can a newborn baby get an Aadhaar",
+      "expected_file": "resident-handbook-english-2021.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+    {
+      "id": "aadhaar-04", "split": "final", "service": "aadhaar",
+      "query": "I lost my Aadhaar card, how can I get it again",
+      "expected_file": "resident-handbook-english-2021.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+    {
+      "id": "aadhaar-05", "split": "final", "service": "aadhaar",
+      "query": "what can I do if I have no identity documents to enrol in Aadhaar",
+      "expected_file": "list-of-supporting-document-for-aadhaar-enrolment-and-update.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+
+    {
+      "id": "kcc-01", "split": "tune", "service": "kcc",
+      "query": "who can get a Kisan Credit Card",
+      "expected_file": "revised-scheme-for-issue-of-kisan-credit-card.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+    {
+      "id": "kcc-02", "split": "tune", "service": "kcc",
+      "query": "how much loan limit does a farmer get under KCC",
+      "expected_file": "revised-scheme-for-issue-of-kisan-credit-card.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+    {
+      "id": "kcc-03", "split": "tune", "service": "kcc",
+      "query": "do I need to give security or collateral for a small KCC loan",
+      "expected_file": "revised-scheme-for-issue-of-kisan-credit-card.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+    {
+      "id": "kcc-04", "split": "final", "service": "kcc",
+      "query": "is crop insurance compulsory for KCC borrowers",
+      "expected_file": "revised-scheme-for-issue-of-kisan-credit-card.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+    {
+      "id": "kcc-05", "split": "final", "service": "kcc",
+      "query": "for how many years is a Kisan Credit Card valid",
+      "expected_file": "revised-scheme-for-issue-of-kisan-credit-card.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+
+    {
+      "id": "voter-01", "split": "tune", "service": "voter-id",
+      "query": "how do I register as a new voter",
+      "expected_file": "guidelines-for-filling-up-application-form-6.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+    {
+      "id": "voter-02", "split": "tune", "service": "voter-id",
+      "query": "which documents do I attach with my voter registration application",
+      "expected_file": "guidelines-for-filling-up-application-form-6.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+    {
+      "id": "voter-03", "split": "tune", "service": "voter-id",
+      "query": "I will turn 18 next year, can I apply for a voter card now",
+      "expected_file": "guidelines-for-filling-up-application-form-6.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+    {
+      "id": "voter-04", "split": "final", "service": "voter-id",
+      "query": "how should I fill the address part of the voter registration form",
+      "expected_file": "guidelines-for-filling-up-application-form-6.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    },
+    {
+      "id": "voter-05", "split": "final", "service": "voter-id",
+      "query": "where do I submit Form 6 after filling it in",
+      "expected_file": "form-6-english.pdf",
+      "must_contain": ["TODO"],
+      "verified": false
+    }
+  ]
+}
