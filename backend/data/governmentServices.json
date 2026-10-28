@@ -1,0 +1,136 @@
+[
+  {
+    "id": "aadhaar",
+    "name": "Aadhaar Card",
+    "category": "Identity",
+    "description": "12-digit unique identity number issued by UIDAI on behalf of the Government of India, serving as proof of identity and address.",
+    "eligibility": "Resident of India (stayed for 182 days or more in the past 12 months), NRI holding valid Indian Passport.",
+    "requiredDocuments": [
+      "Proof of Identity (e.g., Passport, PAN Card, Voter ID)",
+      "Proof of Address (e.g., Passport, Utility Bill, Bank Statement)",
+      "Proof of Date of Birth (e.g., Birth Certificate, SSLC Certificate)",
+      "Passport-size Photograph (taken at enrolment center)"
+    ],
+    "steps": [
+      "Locate nearest Aadhaar Enrolment Centre online.",
+      "Fill out the enrolment form (available at center or downloadable online).",
+      "Submit enrolment form along with PoI, PoA, and PoDB documents.",
+      "Provide demographic and biometric data (fingerprints, iris scan, photo).",
+      "Collect acknowledgement slip containing 14-digit Enrolment ID (EID).",
+      "Track status online and download e-Aadhaar once generated."
+    ],
+    "importantNotes": "Aadhaar is a proof of identity, not proof of citizenship. Basic enrolment is free of cost."
+  },
+  {
+    "id": "pan",
+    "name": "PAN Card",
+    "category": "Tax & Financial",
+    "description": "Permanent Account Number (PAN) is a 10-digit alphanumeric identifier issued by the Income Tax Department for financial & tax tracking.",
+    "eligibility": "Any individual, minor (via parent/guardian), company, trust, or non-resident Indian earning taxable income.",
+    "requiredDocuments": [
+      "Proof of Identity (Aadhaar Card, Voter ID, Passport)",
+      "Proof of Address (Aadhaar Card, Utility Bill, Bank Passbook)",
+      "Proof of Date of Birth (Aadhaar Card, Birth Certificate, Matriculation Cert)",
+      "Two Recent Passport-size Photographs"
+    ],
+    "steps": [
+      "Visit NSDL / Protean or UTIITSL official portal.",
+      "Select Form 49A (for Indian Citizens) or instant e-PAN using Aadhaar e-KYC.",
+      "Fill in personal details accurately matching proof documents.",
+      "Upload scanned copies of photograph, signature, and proof documents.",
+      "Pay application fee online.",
+      "Download instant e-PAN or await physical PAN card delivery by mail."
+    ],
+    "importantNotes": "Linking PAN with Aadhaar is mandatory as per Income Tax regulations."
+  },
+  {
+    "id": "driving-licence",
+    "name": "Driving Licence",
+    "category": "Transport",
+    "description": "Official document authorizing an individual to drive a motor vehicle on public roads, issued by State Regional Transport Offices (RTO).",
+    "eligibility": "Age 16+ for gearless 50cc 2-wheelers; Age 18+ for light motor vehicles (LMV); Learner's Licence held for minimum 30 days.",
+    "requiredDocuments": [
+      "Valid Learner's Licence Number",
+      "Proof of Age (Aadhaar Card, Birth Certificate, Passport)",
+      "Proof of Address (Aadhaar Card, Ration Card, Rent Agreement)",
+      "Form 1 (Self-declaration of physical fitness) / Form 1A (Medical Cert for 40+)",
+      "Passport-size Photographs"
+    ],
+    "steps": [
+      "Apply and obtain Learner's Licence (LL) via Parivahan Sewa portal.",
+      "Hold LL for minimum 30 days (and maximum 180 days).",
+      "Book a slot for practical driving test on Parivahan portal.",
+      "Appear at designated RTO with vehicle and original documents.",
+      "Pass the practical driving skill test conducted by RTO inspector.",
+      "Receive physical Smart Card Driving Licence by post."
+    ],
+    "importantNotes": "Driving without a valid licence is a punishable offence under the Motor Vehicles Act."
+  },
+  {
+    "id": "passport",
+    "name": "Indian Passport",
+    "category": "Travel",
+    "description": "Official travel document issued by the Ministry of External Affairs establishing identity and nationality for international travel.",
+    "eligibility": "All Indian citizens by birth, descent, or naturalization with no active criminal convictions or flight bans.",
+    "requiredDocuments": [
+      "Proof of Present Address (Aadhaar Card, Utility Bill, Bank Passbook)",
+      "Proof of Date of Birth (Aadhaar Card, Birth Certificate, Transfer Certificate)",
+      "Non-ECR (Emigration Check Not Required) Proof (10th/12th Pass Certificate or Higher Degree)"
+    ],
+    "steps": [
+      "Register and log in to Passport Seva Portal (passportindia.gov.in).",
+      "Fill application form online (Fresh Passport / Re-issue).",
+      "Pay fee online and schedule appointment at nearest Passport Seva Kendra (PSK).",
+      "Visit PSK on scheduled date with original documents for document verification and biometrics.",
+      "Complete police verification procedure at local police station.",
+      "Receive Passport via Speed Post."
+    ],
+    "importantNotes": "Ensure document details (name, DOB, parent names) match strictly across all submitted proofs."
+  },
+  {
+    "id": "scholarship",
+    "name": "Post-Matric Scholarship Scheme",
+    "category": "Education",
+    "description": "Financial assistance program for eligible school and college students to pursue higher education without financial barriers.",
+    "eligibility": "Students enrolled in post-matriculation courses, annual family income <= ₹2,500,000, valid category certificate (SC/ST/OBC/EWS/General Merit as applicable).",
+    "requiredDocuments": [
+      "Aadhaar Card linked with Bank Account",
+      "Current Academic Fee Receipt & Student ID",
+      "Marksheet of previous qualifying exam",
+      "Income Certificate issued by Revenue Authority (Tehsildar)",
+      "Domicile Certificate / Caste Certificate (if applicable)",
+      "Bank Account Passbook Copy"
+    ],
+    "steps": [
+      "Register on National Scholarship Portal (NSP) or State Scholarship Portal.",
+      "Complete e-KYC using Aadhaar.",
+      "Select Scheme: Post-Matric Scholarship.",
+      "Fill educational details, family income, and bank account details.",
+      "Upload required scanned documents.",
+      "Submit application and submit physical copy to institute verification officer."
+    ],
+    "importantNotes": "Scholarship funds are directly transferred via Direct Benefit Transfer (DBT) to Aadhaar-seeded bank account."
+  },
+  {
+    "id": "government-scheme",
+    "name": "PM Kisan Samman Nidhi & Welfare Scheme",
+    "category": "Welfare & Subsidies",
+    "description": "Central sector welfare scheme providing financial benefit to eligible landholding farmer families across India.",
+    "eligibility": "Small & marginal farmer families owning cultivable land; annual family income criteria applies; institutional landholders excluded.",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Land Ownership Documents (Khatauni / Land record passbook)",
+      "Aadhaar-linked Active Bank Account",
+      "Mobile Number linked to Aadhaar"
+    ],
+    "steps": [
+      "Visit PM Kisan portal (pmkisan.gov.in) or local Common Service Centre (CSC).",
+      "Click 'New Farmer Registration'.",
+      "Enter Aadhaar number and state details.",
+      "Fill land record details and bank details.",
+      "Complete e-KYC via OTP or biometric CSC verification.",
+      "Status is verified by District Nodal Officer before disbursement."
+    ],
+    "importantNotes": "Mandatory e-KYC and land seeding are required to receive installment disbursements."
+  }
+]

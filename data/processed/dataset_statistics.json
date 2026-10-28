@@ -1,0 +1,27 @@
+{
+  "raw_uci_records": 5574,
+  "synthetic_records": 16,
+  "synthetic_scams": 10,
+  "synthetic_legitimate": 6,
+  "total_before_deduplication": 5590,
+  "duplicates_removed": 414,
+  "final_cleaned_count": 5176,
+  "class_distribution": {
+    "ham": 4524,
+    "spam": 652
+  },
+  "spam_percentage": 12.6,
+  "sources": [
+    {
+      "name": "UCI SMS Spam Collection",
+      "citation": "Almeida, T., Hidalgo, J., & Yamakami, A. (2011). Contributions to the study of SMS spam filtering: new collection and results. ACM DOCENG '11.",
+      "url": "https://archive.ics.uci.edu/dataset/228/sms+spam+collection",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)"
+    },
+    {
+      "name": "Synthetic Indian Bureaucratic Impersonation Test Fixtures",
+      "author": "Bureaucratic Assistance Project Team",
+      "purpose": "Domain adaptation for electricity, income tax refund, Aadhaar KYC, PM-Kisan, and law enforcement impersonation lures."
+    }
+  ]
+}

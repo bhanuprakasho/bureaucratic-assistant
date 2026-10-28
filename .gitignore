@@ -1,0 +1,84 @@
+# ==========================================
+# Environment files and secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# ==========================================
+# Node.js dependencies
+# ==========================================
+node_modules/
+
+# ==========================================
+# Python virtual environments
+# ==========================================
+.venv/
+venv/
+env/
+
+# ==========================================
+# Python cache and generated files
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ==========================================
+# Build artifacts
+# ==========================================
+dist/
+build/
+out/
+
+# ==========================================
+# Operating system files
+# ==========================================
+.DS_Store
+.DS_Store?
+Thumbs.db
+Desktop.ini
+
+# ==========================================
+# IDE and editor files
+# ==========================================
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ==========================================
+# User uploads
+# ==========================================
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ==========================================
+# Local databases
+# ==========================================
+backend/database/*.sqlite
+backend/database/*.sqlite3
+backend/database/*.db
+
+# ==========================================
+# Logs
+# ==========================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==========================================
+# Generated and temporary files
+# ==========================================
+.system_generated/
+.tmp/
+temp/
