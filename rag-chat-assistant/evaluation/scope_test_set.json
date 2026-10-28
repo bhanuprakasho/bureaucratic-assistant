@@ -1,0 +1,46 @@
+{
+  "_readme": [
+    "Labelled queries for scripts/calibrate_scope.py.",
+    "Labels are relative to the documents of the service the user picked ('service'; null = all services):",
+    "  SUFFICIENT   - the documents answer the question. (Not listed here: every verified case in retrieval_test_set.json is imported automatically as SUFFICIENT.)",
+    "  INSUFFICIENT - the TOPIC is covered by that service's documents, but this specific detail is missing or only partly there.",
+    "  OUT_OF_SCOPE - the documents have nothing to do with the question.",
+    "Only cases with verified=true are used. To verify a case: run  python scripts/search_chunks.py --service <service> --query \"<query>\"  and read the top chunks. Decide the label honestly from what the documents say, fix 'label' if my guess is wrong, then set verified=true.",
+    "'expected_suggestion' (optional) is the service the frontend should suggest switching to when the user picked the wrong service.",
+    "The OUT_OF_SCOPE cases oos-01..oos-12 are everyday topics unrelated to passport, Aadhaar, KCC or voter ID, so I marked them verified. Un-verify any you disagree with.",
+    "INSUFFICIENT and wrong-service cases are only my guesses: they stay verified=false until you check them against the documents.",
+    "split='tune' is used while calibrating; split='final' should be scored once at the end."
+  ],
+  "cases": [
+    {"id": "oos-01", "split": "tune",  "service": "passport", "query": "how do I file my income tax return", "label": "OUT_OF_SCOPE", "verified": true},
+    {"id": "oos-02", "split": "tune",  "service": "aadhaar",  "query": "how do I bake a chocolate cake", "label": "OUT_OF_SCOPE", "verified": true},
+    {"id": "oos-03", "split": "tune",  "service": "kcc",      "query": "how do I reset my home wifi router", "label": "OUT_OF_SCOPE", "verified": true},
+    {"id": "oos-04", "split": "tune",  "service": "voter-id", "query": "how do I book a train ticket online", "label": "OUT_OF_SCOPE", "verified": true},
+    {"id": "oos-05", "split": "tune",  "service": "passport", "query": "what is the best way to learn Python programming", "label": "OUT_OF_SCOPE", "verified": true},
+    {"id": "oos-06", "split": "final", "service": "aadhaar",  "query": "how much GST do I pay on a restaurant bill", "label": "OUT_OF_SCOPE", "verified": true},
+    {"id": "oos-07", "split": "final", "service": "kcc",      "query": "what is the weather forecast for tomorrow", "label": "OUT_OF_SCOPE", "verified": true},
+    {"id": "oos-08", "split": "final", "service": "voter-id", "query": "how do I register a new company", "label": "OUT_OF_SCOPE", "verified": true},
+    {"id": "oos-09", "split": "final", "service": "passport", "query": "who won the cricket world cup", "label": "OUT_OF_SCOPE", "verified": true},
+    {"id": "oos-10", "split": "final", "service": "aadhaar",  "query": "what are the symptoms of dengue", "label": "OUT_OF_SCOPE", "verified": true},
+    {"id": "oos-11", "split": "tune",  "service": null,       "query": "how do I file my income tax return", "label": "OUT_OF_SCOPE", "verified": true},
+    {"id": "oos-12", "split": "final", "service": null,       "query": "recommend a good movie for the weekend", "label": "OUT_OF_SCOPE", "verified": true},
+
+    {"id": "ins-01", "split": "tune",  "service": "passport", "query": "what is the tatkal passport fee in Chennai", "label": "INSUFFICIENT", "verified": false,
+     "note": "Guess: documents discuss passports/fees generally but may not give this exact detail. Check."},
+    {"id": "ins-02", "split": "final", "service": "passport", "query": "how many days does police verification take in my city", "label": "INSUFFICIENT", "verified": false},
+    {"id": "ins-03", "split": "tune",  "service": "aadhaar",  "query": "can I update my Aadhaar at a bank branch near my town", "label": "INSUFFICIENT", "verified": false},
+    {"id": "ins-04", "split": "final", "service": "aadhaar",  "query": "what is the penalty for not linking Aadhaar to my ration card", "label": "INSUFFICIENT", "verified": false},
+    {"id": "ins-05", "split": "tune",  "service": "kcc",      "query": "what is the current interest rate on Kisan Credit Card at SBI", "label": "INSUFFICIENT", "verified": false},
+    {"id": "ins-06", "split": "final", "service": "kcc",      "query": "which bank branch near me issues a Kisan Credit Card", "label": "INSUFFICIENT", "verified": false},
+    {"id": "ins-07", "split": "tune",  "service": "voter-id", "query": "how many days will it take to receive my voter card after applying", "label": "INSUFFICIENT", "verified": false},
+    {"id": "ins-08", "split": "final", "service": "voter-id", "query": "can I vote online from abroad", "label": "INSUFFICIENT", "verified": false},
+
+    {"id": "wrong-01", "split": "tune",  "service": "passport", "query": "how do I register as a new voter using Form 6", "label": "OUT_OF_SCOPE", "expected_suggestion": "voter-id", "verified": false,
+     "note": "User picked the wrong service. Label is what the CHOSEN service's documents support; use INSUFFICIENT if they touch the topic."},
+    {"id": "wrong-02", "split": "tune",  "service": "voter-id", "query": "who is eligible for a Kisan Credit Card", "label": "OUT_OF_SCOPE", "expected_suggestion": "kcc", "verified": false},
+    {"id": "wrong-03", "split": "tune",  "service": "kcc",      "query": "how do I update my address in Aadhaar", "label": "OUT_OF_SCOPE", "expected_suggestion": "aadhaar", "verified": false},
+    {"id": "wrong-04", "split": "final", "service": "aadhaar",  "query": "what documents does a minor need for a passport", "label": "OUT_OF_SCOPE", "expected_suggestion": "passport", "verified": false,
+     "note": "Aadhaar documents list a passport as an accepted document, so this may really be INSUFFICIENT. Check."},
+    {"id": "wrong-05", "split": "final", "service": "passport", "query": "what is the loan limit under the Kisan Credit Card", "label": "OUT_OF_SCOPE", "expected_suggestion": "kcc", "verified": false}
+  ]
+}

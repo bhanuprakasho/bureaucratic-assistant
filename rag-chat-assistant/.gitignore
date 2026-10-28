@@ -1,0 +1,34 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+
+# --- Test / tool caches ---
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# --- Generated data (rebuild with scripts/build_chunks.py and scripts/build_index.py) ---
+data/processed/
+data/vector_store/
+
+# --- Secrets and local settings ---
+.env
+.env.*
+.streamlit/secrets.toml
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

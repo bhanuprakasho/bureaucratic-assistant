@@ -1,0 +1,27 @@
+{
+  "passport": {
+    "application-form-instruction-booklet-v3.0.pdf": "https://www.passportindia.gov.in/AppOnlineProject/pdf/ApplicationformInstructionBooklet-V3.0.pdf",
+    "latest-passport-manual-for-disclosure-under-RTI-Act.pdf": "https://www.passportindia.gov.in/AppOnlineProject/pdf/Latest_Passport_Manual_for_disclosure_under_RTI_Act.pdf"
+  },
+  "aadhaar": {
+    "resident-handbook-english-2021.pdf": "https://backend.uidai.gov.in/get/files/media/document/2026-05/LR_Aadhaar_Handbook_2026.pdf"
+  },
+  "kcc": {
+    "revised-scheme-for-issue-of-kisan-credit-card.pdf": "https://rbidocs.rbi.org.in/rdocs/content/pdfs/CRB5100512AN.pdf"
+  },
+  "voter-id": {
+    "form-6-english.pdf": "https://voters.eci.gov.in/formspdf/Form_6_English.pdf",
+    "guidelines-for-filling-up-application-form-6.pdf": "https://voters.eci.gov.in/guidelines/Form-6_en.pdf"
+  },
+  "she": {
+    "FAQs.pdf": "https://www.online-inspire.gov.in/Content/SHEFAQs.pdf",
+    "Guidelines.pdf": "https://www.online-inspire.gov.in/Content/SHEPostofferImplementationGuidelines.pdf"
+  },
+  "pan": {
+    "about-pan-card-income-tax-department.pdf": "https://www.incometaxindia.gov.in/w/about-pan-document-content",
+    "documents-required-for-pan.pdf": "https://www.incometaxindia.gov.in/documents/d/guest/annex-g-document-table",
+    "e-PAN-FAQ.pdf": "https://www.incometax.gov.in/iec/foportal/sites/default/files/2026-01/FAQ%20on%20e-PAN.pdf#",
+    "protean-pan.pdf": "https://tinpan.proteantech.in/services/pan/pan-index",
+    "protean-pan-forms.pdf": "https://tinpan.proteantech.in/downloads/pan/downloads-pan.html"
+  }
+}

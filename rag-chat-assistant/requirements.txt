@@ -1,0 +1,5 @@
+PyMuPDF>=1.23.0
+pytest>=8.0.0
+sentence-transformers>=2.5.0
+chromadb>=0.4.24
+streamlit>=1.35.0
