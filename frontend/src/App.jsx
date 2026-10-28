@@ -19,6 +19,7 @@ import ApplicationDrafts from './pages/ApplicationDrafts';
 import RemindersPage from './pages/RemindersPage';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import RAGAssistant from './pages/RAGAssistant';
 
 // 404 Fallback Page
 function NotFound() {
@@ -48,6 +49,7 @@ function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/services" element={<Services />} />
               <Route path="/eligibility" element={<Eligibility />} />
+              <Route path="/rag-assistant" element={<RAGAssistant />} />
               <Route path="/checklist" element={<Checklist />} />
               <Route path="/scam-verify" element={<ScamVerification />} />
               <Route path="/knowledge" element={<KnowledgeBase />} />

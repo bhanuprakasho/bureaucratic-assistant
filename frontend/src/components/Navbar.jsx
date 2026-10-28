@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { ShieldCheck, BookOpen, Upload, CheckCircle, ListChecks, ShieldAlert, FileText, Bell, FileEdit, UserCheck, LogIn, LogOut, User } from 'lucide-react';
+import { ShieldCheck, BookOpen, Upload, CheckCircle, ListChecks, ShieldAlert, FileText, Bell, FileEdit, UserCheck, LogIn, LogOut, User, MessageCircle } from 'lucide-react';
 
 const Navbar = () => {
   const { user, isAuthenticated, logout } = useAuth();
@@ -66,6 +66,9 @@ const Navbar = () => {
           </NavLink>
           <NavLink to="/eligibility" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
             Eligibility
+          </NavLink>
+          <NavLink   to="/rag-assistant"   className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+            RAG Chat Assistant
           </NavLink>
           <NavLink to="/checklist" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
             Checklist

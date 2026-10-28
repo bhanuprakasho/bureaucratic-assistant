@@ -18,6 +18,7 @@ This platform provides:
 7. **Grounded Knowledge Assistant & Search:** Lexical TF-IDF search citing official verified source URLs, portals, and verification dates.
 8. **Application Drafts & Statement Generator:** Form draft management autofilled from verified OCR documents, and formal Statement of Purpose (SOP) / affidavit generator based strictly on user-supplied facts.
 9. **Document Renewal & Expiry Reminders:** Automated schedule tracking for passport and driving licence expirations with background worker alerts.
+10. **RAG Chat Assistant:** Retrieval-augmented conversational assistance that retrieves relevant information from its document collection and provides grounded responses through a separate Streamlit application integrated into the React frontend.
 
 ---
 
@@ -28,6 +29,7 @@ This platform provides:
 - **Database:** SQLite3 with relational foreign keys, performance indexes, and non-destructive schema migrations.
 - **Security:** `bcryptjs` password hashing (10 rounds), JSON Web Tokens (JWT) with 7-day expiration, server-side RBAC (`citizen`, `reviewer`, `admin`), private file access controls.
 - **Machine Learning & NLP:** Python 3.11+, Scikit-learn (TF-IDF Vectorizer + Logistic Regression / Multinomial Naive Bayes), Pandas, NumPy, Joblib.
+- **RAG Chat Assistant:** Python, Streamlit, and the dependencies listed in `rag-chat-assistant/requirements.txt`; see `rag-chat-assistant/readme.md` for its detailed documentation.
 
 ---
 
@@ -60,6 +62,11 @@ This platform provides:
 │   ├── testing-report.md    # Automated test execution evidence
 │   ├── limitations.md       # Operational boundaries and future expansions
 │   └── viva-guide.md        # Comprehensive student examination preparation guide
+├── rag-chat-assistant/      # RAG Chat Assistant subsystem (see its own readme.md)
+│   ├── scripts/              # Includes the Streamlit entry point: app.py
+│   ├── src/                  # RAG ingestion, processing, indexing, retrieval, and generation modules
+│   ├── requirements.txt      # RAG subsystem Python dependencies
+│   └── readme.md             # Detailed RAG Chat Assistant documentation
 ├── frontend/
 │   ├── src/
 │   │   ├── components/      # Navbar, Footer, ProtectedRoute
@@ -145,6 +152,45 @@ cd frontend
 npm run dev
 ```
 Open `http://localhost:5173` in any modern web browser.
+
+### Step 8: Configure and Start the RAG Chat Assistant
+
+The RAG Chat Assistant runs as a separate Streamlit application. Keep it running alongside the backend and frontend during local development.
+
+**8.1 Configure the frontend URL**
+
+Create `frontend/.env` and add:
+```env
+VITE_RAG_ASSISTANT_URL=http://localhost:8501/?embed=true
+```
+
+This URL is for local development. When deploying, replace it with the actual URL of the separately hosted Streamlit application. Do not commit `frontend/.env`.
+
+**8.2 Install the RAG Assistant dependencies**
+
+Open a new terminal at the repository root and run:
+```bash
+cd rag-chat-assistant
+python -m venv .venv
+source .venv/Scripts/activate
+python -m pip install -r requirements.txt
+```
+
+On Windows Command Prompt instead of Git Bash, activate the environment with:
+```bat
+.venv\Scripts\activate
+```
+
+**8.3 Start Streamlit**
+
+From the `rag-chat-assistant` directory, run:
+```bash
+python -m streamlit run scripts/app.py
+```
+
+Streamlit should be available at `http://localhost:8501`. Keep this terminal running. The React page uses `VITE_RAG_ASSISTANT_URL` to embed the application.
+
+For subsystem-specific setup, configuration, and usage details, refer to `rag-chat-assistant/readme.md`.
 
 ---
 
